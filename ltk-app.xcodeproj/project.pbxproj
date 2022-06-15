@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		495AE7EF28588056007C8C33 /* ltk_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE7EE28588056007C8C33 /* ltk_appApp.swift */; };
+		495AE7F128588056007C8C33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE7F028588056007C8C33 /* ContentView.swift */; };
+		495AE7F328588059007C8C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495AE7F228588059007C8C33 /* Assets.xcassets */; };
+		495AE7F628588059007C8C33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495AE7F528588059007C8C33 /* Preview Assets.xcassets */; };
+		495AE7FD28589282007C8C33 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE7FC28589282007C8C33 /* MainView.swift */; };
+		495AE7FF28589950007C8C33 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE7FE28589950007C8C33 /* Cards.swift */; };
+		495AE8012858999B007C8C33 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE8002858999B007C8C33 /* DetailsView.swift */; };
+		495AE80428589D91007C8C33 /* Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE80328589D91007C8C33 /* Rounded.swift */; };
+		495AE80628589DEB007C8C33 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE80528589DEB007C8C33 /* Data.swift */; };
+		495AE80828589E5E007C8C33 /* DetailScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE80728589E5E007C8C33 /* DetailScroll.swift */; };
+		495AE80B2858C894007C8C33 /* DetailLTK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE80A2858C894007C8C33 /* DetailLTK.swift */; };
+		49AAB2CB2859D1D9006A6928 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAB2CA2859D1D9006A6928 /* API.swift */; };
+		49AAB2CD2859D1E8006A6928 /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAB2CC2859D1E8006A6928 /* APITypes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		495AE7EB28588056007C8C33 /* ltk-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ltk-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		495AE7EE28588056007C8C33 /* ltk_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ltk_appApp.swift; sourceTree = "<group>"; };
+		495AE7F028588056007C8C33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		495AE7F228588059007C8C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		495AE7F528588059007C8C33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		495AE7FC28589282007C8C33 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		495AE7FE28589950007C8C33 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		495AE8002858999B007C8C33 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		495AE80328589D91007C8C33 /* Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounded.swift; sourceTree = "<group>"; };
+		495AE80528589DEB007C8C33 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		495AE80728589E5E007C8C33 /* DetailScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScroll.swift; sourceTree = "<group>"; };
+		495AE80A2858C894007C8C33 /* DetailLTK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLTK.swift; sourceTree = "<group>"; };
+		49AAB2CA2859D1D9006A6928 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		49AAB2CC2859D1E8006A6928 /* APITypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		495AE7E828588056007C8C33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		495AE7E228588056007C8C33 = {
+			isa = PBXGroup;
+			children = (
+				495AE7ED28588056007C8C33 /* ltk-app */,
+				495AE7EC28588056007C8C33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		495AE7EC28588056007C8C33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				495AE7EB28588056007C8C33 /* ltk-app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		495AE7ED28588056007C8C33 /* ltk-app */ = {
+			isa = PBXGroup;
+			children = (
+				49AAB2C92859D1BF006A6928 /* Data */,
+				495AE8092858C7C0007C8C33 /* Detail */,
+				495AE80228589D7B007C8C33 /* helpers */,
+				495AE7EE28588056007C8C33 /* ltk_appApp.swift */,
+				495AE7F028588056007C8C33 /* ContentView.swift */,
+				495AE7F228588059007C8C33 /* Assets.xcassets */,
+				495AE7F428588059007C8C33 /* Preview Content */,
+				495AE7FC28589282007C8C33 /* MainView.swift */,
+				495AE7FE28589950007C8C33 /* Cards.swift */,
+			);
+			path = "ltk-app";
+			sourceTree = "<group>";
+		};
+		495AE7F428588059007C8C33 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				495AE7F528588059007C8C33 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		495AE80228589D7B007C8C33 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				495AE80328589D91007C8C33 /* Rounded.swift */,
+				495AE80528589DEB007C8C33 /* Data.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		495AE8092858C7C0007C8C33 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				495AE8002858999B007C8C33 /* DetailsView.swift */,
+				495AE80728589E5E007C8C33 /* DetailScroll.swift */,
+				495AE80A2858C894007C8C33 /* DetailLTK.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		49AAB2C92859D1BF006A6928 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				49AAB2CA2859D1D9006A6928 /* API.swift */,
+				49AAB2CC2859D1E8006A6928 /* APITypes.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		495AE7EA28588056007C8C33 /* ltk-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 495AE7F928588059007C8C33 /* Build configuration list for PBXNativeTarget "ltk-app" */;
+			buildPhases = (
+				495AE7E728588056007C8C33 /* Sources */,
+				495AE7E828588056007C8C33 /* Frameworks */,
+				495AE7E928588056007C8C33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ltk-app";
+			productName = "ltk-app";
+			productReference = 495AE7EB28588056007C8C33 /* ltk-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		495AE7E328588056007C8C33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					495AE7EA28588056007C8C33 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 495AE7E628588056007C8C33 /* Build configuration list for PBXProject "ltk-app" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 495AE7E228588056007C8C33;
+			productRefGroup = 495AE7EC28588056007C8C33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				495AE7EA28588056007C8C33 /* ltk-app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		495AE7E928588056007C8C33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495AE7F628588059007C8C33 /* Preview Assets.xcassets in Resources */,
+				495AE7F328588059007C8C33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		495AE7E728588056007C8C33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495AE7F128588056007C8C33 /* ContentView.swift in Sources */,
+				495AE80428589D91007C8C33 /* Rounded.swift in Sources */,
+				495AE8012858999B007C8C33 /* DetailsView.swift in Sources */,
+				495AE7FD28589282007C8C33 /* MainView.swift in Sources */,
+				49AAB2CD2859D1E8006A6928 /* APITypes.swift in Sources */,
+				49AAB2CB2859D1D9006A6928 /* API.swift in Sources */,
+				495AE7EF28588056007C8C33 /* ltk_appApp.swift in Sources */,
+				495AE80628589DEB007C8C33 /* Data.swift in Sources */,
+				495AE80B2858C894007C8C33 /* DetailLTK.swift in Sources */,
+				495AE7FF28589950007C8C33 /* Cards.swift in Sources */,
+				495AE80828589E5E007C8C33 /* DetailScroll.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		495AE7F728588059007C8C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		495AE7F828588059007C8C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		495AE7FA28588059007C8C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ltk-app/Preview Content\"";
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shema.ltk-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		495AE7FB28588059007C8C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ltk-app/Preview Content\"";
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shema.ltk-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		495AE7E628588056007C8C33 /* Build configuration list for PBXProject "ltk-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				495AE7F728588059007C8C33 /* Debug */,
+				495AE7F828588059007C8C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		495AE7F928588059007C8C33 /* Build configuration list for PBXNativeTarget "ltk-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				495AE7FA28588059007C8C33 /* Debug */,
+				495AE7FB28588059007C8C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 495AE7E328588056007C8C33 /* Project object */;
+}
