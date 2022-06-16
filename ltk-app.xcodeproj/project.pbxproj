@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490ABA19285B613E00BF227B /* BrowserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490ABA18285B613E00BF227B /* BrowserHelper.swift */; };
+		490ABA1B285B68B500BF227B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490ABA1A285B68B500BF227B /* Launch Screen.storyboard */; };
 		495AE7EF28588056007C8C33 /* ltk_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE7EE28588056007C8C33 /* ltk_appApp.swift */; };
 		495AE7F128588056007C8C33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE7F028588056007C8C33 /* ContentView.swift */; };
 		495AE7F328588059007C8C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495AE7F228588059007C8C33 /* Assets.xcassets */; };
@@ -20,9 +22,12 @@
 		495AE80B2858C894007C8C33 /* DetailLTK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AE80A2858C894007C8C33 /* DetailLTK.swift */; };
 		49AAB2CB2859D1D9006A6928 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAB2CA2859D1D9006A6928 /* API.swift */; };
 		49AAB2CD2859D1E8006A6928 /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAB2CC2859D1E8006A6928 /* APITypes.swift */; };
+		49AAB2CF2859DD49006A6928 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAB2CE2859DD49006A6928 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490ABA18285B613E00BF227B /* BrowserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserHelper.swift; sourceTree = "<group>"; };
+		490ABA1A285B68B500BF227B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		495AE7EB28588056007C8C33 /* ltk-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ltk-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		495AE7EE28588056007C8C33 /* ltk_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ltk_appApp.swift; sourceTree = "<group>"; };
 		495AE7F028588056007C8C33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +42,7 @@
 		495AE80A2858C894007C8C33 /* DetailLTK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLTK.swift; sourceTree = "<group>"; };
 		49AAB2CA2859D1D9006A6928 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		49AAB2CC2859D1E8006A6928 /* APITypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
+		49AAB2CE2859DD49006A6928 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		495AE7E228588056007C8C33 = {
 			isa = PBXGroup;
 			children = (
+				490ABA1A285B68B500BF227B /* Launch Screen.storyboard */,
 				495AE7ED28588056007C8C33 /* ltk-app */,
 				495AE7EC28588056007C8C33 /* Products */,
 			);
@@ -95,6 +102,7 @@
 			children = (
 				495AE80328589D91007C8C33 /* Rounded.swift */,
 				495AE80528589DEB007C8C33 /* Data.swift */,
+				490ABA18285B613E00BF227B /* BrowserHelper.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			children = (
 				49AAB2CA2859D1D9006A6928 /* API.swift */,
 				49AAB2CC2859D1E8006A6928 /* APITypes.swift */,
+				49AAB2CE2859DD49006A6928 /* APIClient.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490ABA1B285B68B500BF227B /* Launch Screen.storyboard in Resources */,
 				495AE7F628588059007C8C33 /* Preview Assets.xcassets in Resources */,
 				495AE7F328588059007C8C33 /* Assets.xcassets in Resources */,
 			);
@@ -193,12 +203,14 @@
 				495AE8012858999B007C8C33 /* DetailsView.swift in Sources */,
 				495AE7FD28589282007C8C33 /* MainView.swift in Sources */,
 				49AAB2CD2859D1E8006A6928 /* APITypes.swift in Sources */,
+				490ABA19285B613E00BF227B /* BrowserHelper.swift in Sources */,
 				49AAB2CB2859D1D9006A6928 /* API.swift in Sources */,
 				495AE7EF28588056007C8C33 /* ltk_appApp.swift in Sources */,
 				495AE80628589DEB007C8C33 /* Data.swift in Sources */,
 				495AE80B2858C894007C8C33 /* DetailLTK.swift in Sources */,
 				495AE7FF28589950007C8C33 /* Cards.swift in Sources */,
 				495AE80828589E5E007C8C33 /* DetailScroll.swift in Sources */,
+				49AAB2CF2859DD49006A6928 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +347,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -364,6 +377,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

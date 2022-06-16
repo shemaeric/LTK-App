@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+var isFetched: Bool = false
+
 struct ContentView: View {
+    
+    @State var dataValues: API.Response.DataResponse? = nil
+    
     var body: some View {
         
         NavigationView {
@@ -51,13 +56,57 @@ struct ContentView: View {
                 }.background(Color.white)
                 .padding([.leading, .trailing, .top], 15)
                 
-               MainView()
+                if dataValues != nil {
+                    MainView(data: dataValues!)
+                }
                     
             }.navigationBarBackButtonHidden(true)
             .navigationBarTitle("")
             .navigationBarHidden(true)
             
+        }.task {
+            
+            fetchResult(featured: "true", limit: "20")
+            
         }
+        
+    }
+    
+    // MARK: - Fetch Result from API
+    
+    
+    /* Fetch the Result from API
+    */
+    
+    func fetchResult(featured: String, limit: String) {
+        
+        API.Client.shared.get(.ltks(featured: featured, limit: limit)) {
+            
+            (result: Result<API.Response.DataResponse, API.Error>) in
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let success):
+                    parseResult(success)
+                case .failure(let failure):
+                    print("the failure now", failure.localizedDescription)
+                }
+            }
+            
+        }
+    }
+
+    // MARK: - Passing Results
+    
+    
+    /* Passing results to be reflected on the UI
+    */
+    
+    private func parseResult(_ result: API.Response.DataResponse) {
+        
+        let fetchedValues = API.Response.DataResponse(ltks: result.ltks, profiles: result.profiles, products: result.products)
+        
+        dataValues = fetchedValues
         
     }
     
@@ -70,17 +119,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// Sample data has already been created
-
 var sizes = ["S","M","X","XL"]
 
-var types = ["Dress","Pants","Blazers","Skirt"]
+var types = ["All"]
 
-var datas = [
-    
 
-    type(id: 0,rows: [row(id:0,name: "Fit And Flare", price: "$299", image: "img1"),row(id:1,name: "Flexi Dress", price: "$160", image: "img2")]),
 
-    type(id: 2,rows: [row(id:0,name: "Summer Vibes", price: "$160", image: "img3"),row(id:1,name: "Flora Fun", price: "$200", image: "img4")]),
-
-]

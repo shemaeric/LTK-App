@@ -12,6 +12,15 @@ struct DetailView : View {
     
     @Binding var show : Bool
     @State var size = ""
+    @State private var showSafari: Bool = false
+    
+    var data: API.Response.DataResponse
+    var product: API.Response.DataResponse.Product
+    var ltk: API.Response.DataResponse.LTK
+    
+    @State var profileName = ""
+    @State var profilePic = ""
+    @State var profileFullName = ""
     
     var body: some View {
         
@@ -35,7 +44,13 @@ struct DetailView : View {
                     
                 }) {
                     
-                    Image("search").renderingMode(.original)
+                    if profileFullName.isEmpty {
+                        
+                        Text(profileName)
+                        
+                    } else {
+                        Text(profileFullName)
+                    }
                     
                 }
                 
@@ -52,7 +67,22 @@ struct DetailView : View {
             .navigationBarBackButtonHidden(true)
             .padding(15)
             
-            Image("img").resizable()
+            AsyncImage(url: URL(string: product.image_url)) {
+                
+                phase in
+                switch phase {
+                    
+                case .empty:
+                    ProgressView()
+                    
+                case .success(let image):
+                    image.resizable().scaledToFit()
+                case .failure(_):
+                    Image(systemName: "photo")
+                @unknown default:
+                    EmptyView()
+                }
+            }
             
             VStack(alignment: .leading, spacing: 15) {
                 
@@ -60,8 +90,7 @@ struct DetailView : View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         
-                        Text("Summer").font(.largeTitle)
-                        Text("$160").fontWeight(.heavy)
+                        Text(product.matching).font(.largeTitle)
                         
                     }
                     
@@ -77,7 +106,7 @@ struct DetailView : View {
                     
                 }
                 
-                Text("Fitted top made from a polyamide blend. Features wide straps and chest reinforcement.")
+                Text(ltk.caption)
                 
                 Text("Select Size")
                 
@@ -101,22 +130,17 @@ struct DetailView : View {
                 
                 HStack {
                     
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Text("Add To Cart").padding().border(Color.black, width: 1.4)
-                        
-                    }.foregroundColor(.black)
-                    
                     Spacer()
                     
                     Button(action: {
                         
                     }) {
                         
-                        Text("Buy Now").padding()
-                        
+                        Text("Buy Now").padding().onTapGesture {
+                            showSafari.toggle()
+                        }.fullScreenCover(isPresented: $showSafari, content: {
+                            SFSafariViewWrapper(url: URL(string: product.hyperlink)!)
+                    })
                     }.foregroundColor(.white)
                     .background(Color.black)
                     .cornerRadius(10)
@@ -128,7 +152,18 @@ struct DetailView : View {
             .background(rounded().fill(Color.white))
             .padding(.top, -50)
             
-        }
+        }.onAppear(perform: {
+            
+            for profile in data.profiles {
+                
+                if profile.id == ltk.profile_id {
+                    
+                    profileName = profile.display_name
+                    profilePic = profile.avatar_url
+                    profileFullName = profile.full_name
+                }
+            }
+        })
         
     }
     

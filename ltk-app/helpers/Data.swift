@@ -22,3 +22,5 @@ struct row : Identifiable {
     var image : String
     
 }
+
+

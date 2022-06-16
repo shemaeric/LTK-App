@@ -12,13 +12,29 @@ struct DetailLTK: View {
      
     @Binding var show : Bool
     
+    var ltk: API.Response.DataResponse.LTK
+    var allData: API.Response.DataResponse
+    
     var body: some View {
+        
         ZStack {
             
-            Image("img").resizable()
-                .aspectRatio(contentMode: .fill)
-                .edgesIgnoringSafeArea(.all)
-                .frame(minWidth: 0, maxWidth: .infinity)
+            AsyncImage(url: URL(string: ltk.hero_image)) {
+                
+                phase in
+                switch phase {
+                    
+                case .empty:
+                    ProgressView()
+                    
+                case .success(let image):
+                    image.resizable().aspectRatio(contentMode: .fill).edgesIgnoringSafeArea(.all).frame(minWidth: 0, maxWidth: .infinity)
+                case .failure(_):
+                    Image(systemName: "photo")
+                @unknown default:
+                    EmptyView()
+                }
+            }
             
             VStack {
                 
@@ -28,58 +44,48 @@ struct DetailLTK: View {
                     
                     HStack() {
                         
-                        NavigationLink(destination: DetailView(show: $show)) {
-                            ZStack(alignment: .bottom) {
-                                Image("img2").aspectRatio(contentMode: .fill)
-                                    .edgesIgnoringSafeArea(.all)
-                                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 150)
+                        ForEach(allData.products) { productValue in
+                            
+                            if productValue.ltk_id == ltk.id {
                                 
-                                Spacer()
+                                NavigationLink(destination: DetailView(show: $show, data: allData, product: productValue, ltk: ltk)) {
+                                    ZStack(alignment: .bottom) {
                                 
-                                Button("Exact") {
-                                    print("Button pressed!")
+                                        AsyncImage(url: URL(string: productValue.image_url)) {
+                                
+                                            phase in
+                                            switch phase {
+                                
+                                            case .empty:
+                                                ProgressView()
+                                
+                                            case .success(let image):
+                                                image.resizable().aspectRatio(contentMode: .fill)
+                                                    .edgesIgnoringSafeArea(.all)
+                                                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 150)
+                                            case .failure(_):
+                                                Image(systemName: "photo")
+                                            @unknown default:
+                                                EmptyView()
+                                            }
+                                        }
+                                
+                                        Spacer()
+                                
+                                        Button("Similar prodcut") {
+                                            print("Button pressed!")
+                                        }
+                                        .padding(.horizontal, 4)
+                                        .padding(.vertical, 4)
+                                        .background(.green)
+                                        .foregroundColor(.white)
+                                        .clipShape(Capsule())
+                                    }.cornerRadius(10)
                                 }
-                                .padding(.horizontal, 24)
-                                .padding(.vertical, 10)
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .clipShape(Capsule())
-                            }.cornerRadius(10)
+                                
+                            }
+                            
                         }
-                        
-                        ZStack(alignment: .bottom) {
-                            Image("img2").aspectRatio(contentMode: .fill)
-                                .edgesIgnoringSafeArea(.all)
-                                .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 150)
-                            
-                            Spacer()
-                            
-                            Button("Exact") {
-                                print("Button pressed!")
-                            }
-                            .padding(.horizontal, 24)
-                            .padding(.vertical, 10)
-                            .background(.green)
-                            .foregroundColor(.white)
-                            .clipShape(Capsule())
-                        }.cornerRadius(10)
-                        
-                        ZStack(alignment: .bottom) {
-                            Image("img2").aspectRatio(contentMode: .fill)
-                                .edgesIgnoringSafeArea(.all)
-                                .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 150)
-                            
-                            Spacer()
-                            
-                            Button("Exact") {
-                                print("Button pressed!")
-                            }
-                            .padding(.horizontal, 24)
-                            .padding(.vertical, 10)
-                            .background(.green)
-                            .foregroundColor(.white)
-                            .clipShape(Capsule())
-                        }.cornerRadius(10)
                     }
                     
                     }

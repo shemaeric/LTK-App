@@ -12,6 +12,8 @@ struct MainView : View {
     
     @State var selected = "Dress"
     
+    var data: API.Response.DataResponse
+    
     var body: some View {
         
         VStack(spacing: 15) {
@@ -30,8 +32,8 @@ struct MainView : View {
                             Text(i).padding()
                             
                         }
-                        .foregroundColor(self.selected == i ? .white : .black)
-                        .background(self.selected == i ? Color.black : Color.clear)
+                        .foregroundColor(.white)
+                        .background(Color.black)
                         .cornerRadius(10)
                         
                         Spacer(minLength: 0)
@@ -42,7 +44,7 @@ struct MainView : View {
                 
             }
             
-            DetailsScroll()
+            DetailsScroll(data: data)
             
         }.padding()
         .background(Color("Color"))
