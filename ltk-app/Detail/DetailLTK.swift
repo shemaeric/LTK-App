@@ -72,7 +72,7 @@ struct DetailLTK: View {
                                 
                                         Spacer()
                                 
-                                        Button("Similar prodcut") {
+                                        Button("Similar product") {
                                             print("Button pressed!")
                                         }
                                         .padding(.horizontal, 4)
